@@ -65,6 +65,14 @@ class TaskManager {
     // 1. Remove a task by name
     public void removeTask(String name) {
         // TODO: Implement removal logic
+        int i = 0;
+        for (int k = 0; k < tasks.size(); k++) {
+            if (tasks.get(k).getName().equals(name)) {
+                tasks.remove(i);
+            } else {
+                i++;
+            }
+        }
     }
 
     // 2. Find all completed tasks
@@ -98,7 +106,23 @@ class TaskManager {
     // 7. Count tasks per category
     public Map<String, Integer> countTasksPerCategory() {
         // TODO: Implement counting logic
-        return new HashMap<>();
+        HashMap<String, Integer> map = new HashMap<>();
+        ArrayList<String> categories = new ArrayList<>();
+
+        for (Task task : tasks) {
+            categories.add(task.getCategory());
+        }
+
+        for (Task task : tasks) {
+            if (map.containsKey(task.getCategory())) {
+                map.put(task.getCategory(), map.get(task.getCategory()) + 1);
+            } else {
+                map.put(task.getCategory(), 1);
+            }
+        }
+
+        System.out.println(map);
+        return map;
     }
 
     // 8. Mark a task as completed by name
@@ -109,6 +133,11 @@ class TaskManager {
     // 9. Mark all tasks in a category as completed
     public void markCategoryCompleted(String category) {
         // TODO: Implement bulk completion logic
+        for (Task task : tasks) {
+            if (task.getCategory().equals(category)) {
+                task.complete();
+            }
+        }
     }
 }
 
@@ -120,7 +149,8 @@ public class SI2025Lab1Main {
         manager.addTask("Buy groceries", Priority.LOW, "Personal");
 
         // MISSING: Calls to the new methods that will be implemented
-
+        manager.removeTask("Buy groceries");
+        manager.countTasksPerCategory();
         manager.printTasks();
     }
 }
