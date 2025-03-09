@@ -1,0 +1,35 @@
+mkdir SI_2025_lab1_231539     
+cd SI_2025_lab1_231539  
+git init
+cat > README.md
+git add .
+git commit -m "Initial commit"
+git branch -M master
+git remote add origin git@github.com:omertairi04/SI_2025_lab1_231539
+git push -u origin master
+git add .
+git commit -m "Add starter code"
+git push origin master
+git branch remove-task-by-name 
+git branch count-task-per-category
+git branch mark-all-tasks-in-category-as-completed
+
+git checkout remove-task-by-name
+git add .
+git commit -m "finished remove-task-by-name"
+
+git checkout count-task-per-category
+git add .
+git commit -m "finished count-task-per-category"
+
+git checkout count-task-per-category
+git add .
+git commit -m "finished count-task-per-category"
+
+git checkout mark-all-tasks-in-category-as-completed
+git add .
+git commit -m "finished mark-all-tasks-in-category-as-completed"
+
+git checkout master
+git pull
+

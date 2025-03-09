@@ -1,0 +1,17 @@
+*   fa249af Merge pull request #11 from omertairi04/mark-all-tasks-in-category-as-completed
+|\  
+| * b0947f5 completed the task
+| *   c3dc117 Merge branch 'master' into mark-all-tasks-in-category-as-completed
+| |\  
+| | * 9bc999c finish
+| * | 9cb780e completed this
+* | |   a351a81 Merge pull request #10 from omertairi04/count-task-per-category
+|\ \ \  
+| |/ /  
+|/| /   
+| |/    
+| * 4f71a08 finished
+| * d0d80e1 Finished removeTask By Name
+|/  
+* d504184 Add starter code
+* 3dc1ec0 Initial commit
