@@ -65,6 +65,14 @@ class TaskManager {
     // 1. Remove a task by name
     public void removeTask(String name) {
         // TODO: Implement removal logic
+        int i = 0;
+        for (int k = 0; k < tasks.size(); k++) {
+            if (tasks.get(k).getName().equals(name)) {
+                tasks.remove(i);
+            } else {
+                i++;
+            }
+        }
     }
 
     // 2. Find all completed tasks
@@ -120,6 +128,7 @@ public class SI2025Lab1Main {
         manager.addTask("Buy groceries", Priority.LOW, "Personal");
 
         // MISSING: Calls to the new methods that will be implemented
+        manager.removeTask("Buy groceries");
 
         manager.printTasks();
     }
