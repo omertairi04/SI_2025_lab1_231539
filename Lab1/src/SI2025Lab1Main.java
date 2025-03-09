@@ -151,6 +151,7 @@ public class SI2025Lab1Main {
         // MISSING: Calls to the new methods that will be implemented
         manager.removeTask("Buy groceries");
         manager.countTasksPerCategory();
+        manager.markCategoryCompleted("Work");
         manager.printTasks();
     }
 }
